@@ -25,8 +25,6 @@ def munge():
             ORDER BY date ASC
         """)
 
-    # Data Collected from https://github.com/owid/covid-19-data/tree/master/public/data on 2021/02/18
-    # return json.loads(data.to_json(orient='records'))
     fig = go.Figure()
     fig.add_trace(go.Scatter(x=data.get('date'), y=data.get(
         'ephemeral_mortality_rate'), mode='lines', name='Ephemeral Case Fatality Rate (Percent)'))
