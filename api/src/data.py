@@ -6,7 +6,8 @@ import pandasql as ps
 from plotly.utils import PlotlyJSONEncoder
 
 # precompute to waste memory / save time
-source = pd.read_csv('owid-covid-data.csv', delimiter=',')
+source = pd.read_csv(
+    'https://raw.githubusercontent.com/owid/covid-19-data/master/public/data/owid-covid-data.csv', delimiter=',')
 data = None
 
 
